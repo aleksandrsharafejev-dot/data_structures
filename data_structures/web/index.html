@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures Visual Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Interactive Studio</div>
+        <h1>Data Structures Visual Lab</h1>
+        <p class="subtitle">
+          Visualize how core data structures behave. Add, remove, search, and
+          watch each structure update in real time.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-item">
+          <span>Structures</span>
+          <strong>9</strong>
+        </div>
+        <div class="panel-item">
+          <span>Mode</span>
+          <strong>Live</strong>
+        </div>
+        <div class="panel-item">
+          <span>Theme</span>
+          <strong>Warm Lab</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="stack-card">
+        <h2>Stack</h2>
+        <p>Last in, first out.</p>
+        <div class="viz stack" id="stack-viz"></div>
+        <div class="controls">
+          <input type="number" id="stack-input" value="10" />
+          <button data-action="stack-push">Push</button>
+          <button data-action="stack-pop" class="ghost">Pop</button>
+          <button data-action="stack-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="queue-card">
+        <h2>Queue</h2>
+        <p>First in, first out.</p>
+        <div class="viz row" id="queue-viz"></div>
+        <div class="controls">
+          <input type="number" id="queue-input" value="5" />
+          <button data-action="queue-enqueue">Enqueue</button>
+          <button data-action="queue-dequeue" class="ghost">Dequeue</button>
+          <button data-action="queue-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="deque-card">
+        <h2>Deque</h2>
+        <p>Push and pop at both ends.</p>
+        <div class="viz row" id="deque-viz"></div>
+        <div class="controls">
+          <input type="number" id="deque-input" value="7" />
+          <button data-action="deque-front">Push Front</button>
+          <button data-action="deque-back">Push Back</button>
+          <button data-action="deque-pop-front" class="ghost">Pop Front</button>
+          <button data-action="deque-pop-back" class="ghost">Pop Back</button>
+        </div>
+      </section>
+
+      <section class="card" id="linked-card">
+        <h2>Linked List</h2>
+        <p>Nodes connected by pointers.</p>
+        <div class="viz row" id="linked-viz"></div>
+        <div class="controls">
+          <input type="number" id="linked-input" value="3" />
+          <button data-action="linked-append">Append</button>
+          <button data-action="linked-remove" class="ghost">Remove</button>
+          <button data-action="linked-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="circular-card">
+        <h2>Circular Linked List</h2>
+        <p>Tail connects back to head.</p>
+        <div class="viz circle" id="circular-viz"></div>
+        <div class="controls">
+          <input type="number" id="circular-input" value="1" />
+          <button data-action="circular-append">Append</button>
+          <button data-action="circular-rotate" class="ghost">Rotate</button>
+          <button data-action="circular-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="bst-card">
+        <h2>Binary Search Tree</h2>
+        <p>Ordered nodes with left/right children.</p>
+        <canvas class="viz canvas" id="bst-viz" width="380" height="220"></canvas>
+        <div class="controls">
+          <input type="number" id="bst-input" value="8" />
+          <button data-action="bst-insert">Insert</button>
+          <button data-action="bst-search" class="ghost">Search</button>
+          <button data-action="bst-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="heap-card">
+        <h2>Max Heap</h2>
+        <p>Parent nodes larger than children.</p>
+        <canvas class="viz canvas" id="heap-viz" width="380" height="220"></canvas>
+        <div class="controls">
+          <input type="number" id="heap-input" value="20" />
+          <button data-action="heap-insert">Insert</button>
+          <button data-action="heap-extract" class="ghost">Extract Max</button>
+          <button data-action="heap-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="hash-card">
+        <h2>Hash Table</h2>
+        <p>Keys mapped into buckets.</p>
+        <div class="viz table" id="hash-viz"></div>
+        <div class="controls">
+          <input type="text" id="hash-key" value="apple" />
+          <input type="number" id="hash-value" value="10" />
+          <button data-action="hash-insert">Insert</button>
+          <button data-action="hash-remove" class="ghost">Remove</button>
+          <button data-action="hash-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card" id="pqueue-card">
+        <h2>Priority Queue</h2>
+        <p>Higher priority dequeues first.</p>
+        <div class="viz column" id="pqueue-viz"></div>
+        <div class="controls">
+          <input type="text" id="pqueue-item" value="task" />
+          <input type="number" id="pqueue-priority" value="1" />
+          <button data-action="pqueue-enqueue">Enqueue</button>
+          <button data-action="pqueue-dequeue" class="ghost">Dequeue</button>
+          <button data-action="pqueue-clear" class="ghost">Clear</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
